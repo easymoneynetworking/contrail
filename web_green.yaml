@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: web_green_pod
+  name: web-green-pod
   namespace: default
   labels:
     environment: green
