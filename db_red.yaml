@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db_red_pod
+  namespace: default
+  labels:
+    environment: red
+    tier: db
+spec:
+  containers:
+  - name: db-container
+    image: nginx
+    ports:
+    - containerPort: 80
