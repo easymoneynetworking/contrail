@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db_green_pod
+  namespace: default
+  labels:
+    environment: green
+    tier: db
+spec:
+  containers:
+  - name: db-container
+    image: nginx
+    ports:
+    - containerPort: 80
