@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: app_green_pod
+  name: app-green-pod
   namespace: default
   labels:
     environment: green
