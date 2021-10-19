@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: web_red_pod
+  name: web-red-pod
   namespace: default
   labels:
     environment: red
