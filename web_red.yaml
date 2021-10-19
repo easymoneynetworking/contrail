@@ -1,8 +1,7 @@
-[root@emea-dl-1 ~]# cat web_red.yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: web
+  name: web_red_pod
   namespace: default
   labels:
     environment: red
