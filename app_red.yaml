@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app_red_pod
+  namespace: default
+  labels:
+    environment: red
+    tier: app
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+    ports:
+    - containerPort: 80
