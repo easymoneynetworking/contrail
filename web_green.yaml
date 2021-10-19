@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web_green_pod
+  namespace: default
+  labels:
+    environment: green
+    tier: web
+spec:
+  containers:
+  - name: web-container
+    image: nginx
+    ports:
+    - containerPort: 80
