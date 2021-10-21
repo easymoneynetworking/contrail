@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: db-green-np
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      tier: db
+      environment: green
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          tier: app
+          environment: green
