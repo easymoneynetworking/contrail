@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: web-green-np
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      tier: web
+      environment: green
+  policyTypes:
+  - Ingress
+  - Egress
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          tier: app
+          environment: green
+    ports:
+    - protocol: TCP
+      port: 80
